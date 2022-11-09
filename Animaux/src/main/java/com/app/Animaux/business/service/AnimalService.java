@@ -5,8 +5,7 @@ import com.app.Animaux.business.exception.ResourceNotFoundException;
 import com.app.Animaux.business.repository.AnimalRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class AnimalService {

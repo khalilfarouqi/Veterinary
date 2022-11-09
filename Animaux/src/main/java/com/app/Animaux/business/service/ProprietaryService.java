@@ -2,12 +2,12 @@ package com.app.Animaux.business.service;
 
 import com.app.Animaux.business.entity.Proprietary;
 import com.app.Animaux.business.exception.ResourceNotFoundException;
-import com.app.Animaux.business.repository.AnimalRepository;
 import com.app.Animaux.business.repository.ProprietaryRepository;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
+@Service
 public class ProprietaryService {
 
     private final ProprietaryRepository proprietaryRepository;
@@ -16,7 +16,7 @@ public class ProprietaryService {
         this.proprietaryRepository = proprietaryRepository;
     }
 
-    public List<Proprietary> getAllProprietarys() {
+    public List<Proprietary> getAllProprietary() {
         return proprietaryRepository.findAll();
     }
 
