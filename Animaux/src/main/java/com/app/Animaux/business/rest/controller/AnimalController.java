@@ -65,10 +65,9 @@ public class AnimalController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ApiResponse> deleteAnimal(@PathVariable(name = "id") Long id){
+    public ResponseEntity<String> deleteAnimal(@PathVariable(name = "id") Long id){
         animalService.deleteAnimal(id);
-        ApiResponse apiResponse = new ApiResponse(Boolean.TRUE, "Animal deleted successfully", HttpStatus.OK);
-        return new ResponseEntity<ApiResponse>(apiResponse, HttpStatus.OK);
+        return new ResponseEntity<String>("Animal deleted successfully", HttpStatus.OK);
     }
 
 }
