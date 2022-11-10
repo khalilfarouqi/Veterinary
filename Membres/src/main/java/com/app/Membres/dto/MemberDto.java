@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class MembersDto {
+public class MemberDto {
 
     private Long ID;
     private String FirstName;

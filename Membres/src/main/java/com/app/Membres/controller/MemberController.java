@@ -1,6 +1,6 @@
 package com.app.Membres.controller;
 
-import com.app.Membres.dto.MembersDto;
+import com.app.Membres.dto.MemberDto;
 import com.app.Membres.entity.Members;
 import com.app.Membres.service.MemberService;
 import org.modelmapper.ModelMapper;
@@ -26,40 +26,40 @@ public class MemberController {
     }
 
     @GetMapping
-    public List<MembersDto> getAllMembers(){
-        return memberService.getAllMember().stream().map(Members -> modelMapper.map(Members, MembersDto.class))
+    public List<MemberDto> getAllMembers(){
+        return memberService.getAllMember().stream().map(Members -> modelMapper.map(Members, MemberDto.class))
                 .collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<MembersDto> getMembersById(@PathVariable(name = "id") Long id){
+    public ResponseEntity<MemberDto> getMembersById(@PathVariable(name = "id") Long id){
         Members Members = memberService.getMembersById(id);
 
-        MembersDto MembersResponse = modelMapper.map(Members, MembersDto.class);
+        MemberDto MembersResponse = modelMapper.map(Members, MemberDto.class);
 
         return ResponseEntity.ok().body(MembersResponse);
     }
 
     @PostMapping
-    public ResponseEntity<MembersDto> createMembers(@RequestBody MembersDto MembersDto){
+    public ResponseEntity<MemberDto> createMembers(@RequestBody MemberDto MemberDto){
 
-        Members MembersRequest = modelMapper.map(MembersDto, Members.class);
+        Members MembersRequest = modelMapper.map(MemberDto, Members.class);
 
         Members Members = memberService.createMember(MembersRequest);
 
-        MembersDto MembersResponse = modelMapper.map(Members, MembersDto.class);
+        MemberDto MembersResponse = modelMapper.map(Members, MemberDto.class);
 
-        return new ResponseEntity<MembersDto>(MembersResponse, HttpStatus.CREATED);
+        return new ResponseEntity<MemberDto>(MembersResponse, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MembersDto> updateMembers(@PathVariable long id, @RequestBody MembersDto MembersDto){
+    public ResponseEntity<MemberDto> updateMembers(@PathVariable long id, @RequestBody MemberDto MemberDto){
 
-        Members MembersRequest = modelMapper.map(MembersDto, Members.class);
+        Members MembersRequest = modelMapper.map(MemberDto, Members.class);
 
         Members Members = memberService.updateMember(id, MembersRequest);
 
-        MembersDto MembersResponse = modelMapper.map(Members, MembersDto.class);
+        MemberDto MembersResponse = modelMapper.map(Members, MemberDto.class);
 
         return ResponseEntity.ok().body(MembersResponse);
     }
