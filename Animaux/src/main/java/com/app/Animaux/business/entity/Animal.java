@@ -1,6 +1,6 @@
 package com.app.Animaux.business.entity;
 
-import com.app.Animaux.business.enem.Description_condition;
+import com.app.Animaux.business.enums.Description_condition;
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
