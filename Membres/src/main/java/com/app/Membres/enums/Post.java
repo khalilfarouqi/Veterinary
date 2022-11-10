@@ -1,4 +1,4 @@
-package com.app.Membres;
+package com.app.Membres.enums;
 
 public enum Post {
     doctor, secretary, nurse, housemaid

@@ -1,4 +1,4 @@
-package com.app.Animaux.business.enem;
+package com.app.Animaux.business.enums;
 
 public enum Description_condition {
     Undetermined,
