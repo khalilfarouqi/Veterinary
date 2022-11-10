@@ -15,17 +15,17 @@ public class MemberService {
         this.membersRepository = membersRepository;
     }
 
-    public List<Members> getAllMedication() {
+    public List<Members> getAllMember() {
         return membersRepository.findAll();
     }
 
-    public Members createMedication(Members medication) {
-        return membersRepository.save(medication);
+    public Members createMember(Members member) {
+        return membersRepository.save(member);
     }
 
-    public Members updateMedication(long id, Members membersRequest) {
+    public Members updateMember(long id, Members membersRequest) {
         Members members = membersRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Medication", "id", id));
+                .orElseThrow(() -> new ResourceNotFoundException("Member", "id", id));
 
         members.setPost(membersRequest.getPost());
         members.setBirthDay(membersRequest.getBirthDay());
@@ -36,7 +36,7 @@ public class MemberService {
         return membersRepository.save(members);
     }
 
-    public void deleteMedication(long id) {
+    public void deleteMember(long id) {
         Members members = membersRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Members", "id", id));
 
