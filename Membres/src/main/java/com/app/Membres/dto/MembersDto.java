@@ -1,6 +1,6 @@
 package com.app.Membres.dto;
 
-import com.app.Membres.Post;
+import com.app.Membres.enums.Post;
 import lombok.Data;
 
 import java.util.Date;
