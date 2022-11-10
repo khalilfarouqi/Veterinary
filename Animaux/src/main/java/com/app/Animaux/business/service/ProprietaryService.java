@@ -43,7 +43,7 @@ public class ProprietaryService {
         proprietaryRepository.delete(proprietary);
     }
 
-    public Proprietary getproprietaryById(long id) {
+    public Proprietary getProprietaryById(long id) {
         Optional<Proprietary> result = proprietaryRepository.findById(id);
         if(result.isPresent()) {
             return result.get();
