@@ -1,6 +1,6 @@
 package com.app.Membres.entity;
 
-import com.app.Membres.Post;
+import com.app.Membres.enums.Post;
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
