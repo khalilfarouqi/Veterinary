@@ -1,6 +1,6 @@
 package com.app.Animaux.business.dto;
 
-import com.app.Animaux.business.enem.Description_condition;
+import com.app.Animaux.business.enums.Description_condition;
 import lombok.Data;
 
 import java.util.Date;
