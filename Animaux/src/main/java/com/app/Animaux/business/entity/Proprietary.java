@@ -21,16 +21,16 @@ public class Proprietary {
     @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
 
-    @Column(name = "FirstNom")
-    private String FirstNom;
+    @Column(name = "FirstName")
+    private String FirstName;
 
-    @Column(name = "LastNom")
-    private String LastNom;
+    @Column(name = "LastName")
+    private String LastName;
 
     @Column(name = "CIN")
     private String CIN;
 
     @OneToMany(mappedBy = "proprietary")
-    private List<Animal> Proprietary;
+    private List<Animal> animals;
 
 }

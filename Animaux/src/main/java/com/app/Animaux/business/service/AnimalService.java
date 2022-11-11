@@ -30,7 +30,7 @@ public class AnimalService {
 
         animal.setDate_Birth(animalRequest.getDate_Birth());
         animal.setRace(animalRequest.getRace());
-        animal.setNom(animalRequest.getNom());
+        animal.setName(animalRequest.getName());
         animal.setDescription_condition(animalRequest.getDescription_condition());
         animal.setProprietary(animalRequest.getProprietary());
 

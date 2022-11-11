@@ -28,10 +28,10 @@ public class ProprietaryService {
         Proprietary proprietary = proprietaryRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Proprietary", "id", id));
 
-        proprietary.setProprietary(proprietaryRequest.getProprietary());
+        proprietary.setAnimals(proprietaryRequest.getAnimals());
         proprietary.setCIN(proprietaryRequest.getCIN());
-        proprietary.setFirstNom(proprietaryRequest.getFirstNom());
-        proprietary.setProprietary(proprietaryRequest.getProprietary());
+        proprietary.setFirstName(proprietaryRequest.getFirstName());
+        proprietary.setLastName(proprietaryRequest.getLastName());
 
         return proprietaryRepository.save(proprietary);
     }
