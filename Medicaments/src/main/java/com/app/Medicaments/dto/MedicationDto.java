@@ -6,7 +6,7 @@ import lombok.Data;
 public class MedicationDto {
 
     private Long ID;
-    private String Nom;
+    private String Name;
     private String Marque;
     //UPET = unit price excluding taxes
     private Double UPET;
