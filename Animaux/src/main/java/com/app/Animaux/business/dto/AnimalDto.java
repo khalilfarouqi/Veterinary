@@ -9,11 +9,11 @@ import java.util.Date;
 public class AnimalDto {
 
     private Long Id;
-    private String Nom;
+    private String Name;
     private Date Date_Birth;
     private String Race;
     private Description_condition description_condition;
 
-    private ProprietaryDto proprietaryDto;
+    private ProprietaryDto proprietary;
 
 }
