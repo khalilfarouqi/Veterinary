@@ -27,7 +27,7 @@ public class MemberService {
 
     public Members updateMember(long id, Members membersRequest) {
         Members members = memberRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Member", "id", id));
+                .orElseThrow(() -> new ResourceNotFoundException("MemberRepository", "id", id));
 
         if (membersRequest.getPost() != null) members.setPost(membersRequest.getPost());
         if (membersRequest.getBirthDay() != null) members.setBirthDay(membersRequest.getBirthDay());

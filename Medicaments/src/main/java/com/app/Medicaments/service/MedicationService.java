@@ -28,10 +28,10 @@ public class MedicationService {
         Medications medications = medicationRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Medication", "id", id));
 
-        if (medicationsRequest.getNom() != null) medications.setNom(medicationsRequest.getNom());
-        if (medicationsRequest.getUPET() != null) medications.setUPET(medicationsRequest.getUPET());
-        if (medicationsRequest.getMarque() != null) medications.setMarque(medicationsRequest.getMarque());
-        if (medicationsRequest.getQteStock() != 0) medications.setQteStock(medicationsRequest.getQteStock());
+        medications.setNom(medicationsRequest.getNom());
+        medications.setUPET(medicationsRequest.getUPET());
+        medications.setMarque(medicationsRequest.getMarque());
+        medications.setQteStock(medicationsRequest.getQteStock());
 
         return medicationRepository.save(medications);
     }

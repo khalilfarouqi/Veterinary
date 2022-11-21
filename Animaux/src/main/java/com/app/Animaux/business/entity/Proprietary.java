@@ -30,7 +30,7 @@ public class Proprietary {
     @Column(name = "CIN")
     private String CIN;
 
-    @OneToMany(mappedBy = "proprietary",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "proprietary")
     private List<Animal> Proprietary;
 
 }

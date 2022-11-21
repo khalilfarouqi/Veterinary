@@ -18,8 +18,8 @@ public class Animal {
     @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
 
-    @Column(name = "Nom")
-    private String Nom;
+    @Column(name = "Name")
+    private String Name;
 
     @Column(name = "Date_Birth")
     private Date Date_Birth;
