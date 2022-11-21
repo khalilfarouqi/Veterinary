@@ -29,11 +29,11 @@ public class MemberService {
         Members members = memberRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Member", "id", id));
 
-        members.setPost(membersRequest.getPost());
-        members.setBirthDay(membersRequest.getBirthDay());
-        members.setFirstName(membersRequest.getFirstName());
-        members.setLastName(membersRequest.getLastName());
-        members.setHiring_Date(membersRequest.getHiring_Date());
+        if (membersRequest.getPost() != null) members.setPost(membersRequest.getPost());
+        if (membersRequest.getBirthDay() != null) members.setBirthDay(membersRequest.getBirthDay());
+        if (membersRequest.getFirstName() != null) members.setFirstName(membersRequest.getFirstName());
+        if (membersRequest.getLastName() != null) members.setLastName(membersRequest.getLastName());
+        if (membersRequest.getHiring_Date() != null) members.setHiring_Date(membersRequest.getHiring_Date());
 
         return memberRepository.save(members);
     }
