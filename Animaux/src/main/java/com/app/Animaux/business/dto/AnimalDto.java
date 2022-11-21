@@ -14,6 +14,6 @@ public class AnimalDto {
     private String Race;
     private Description_condition description_condition;
 
-    private ProprietaryDto proprietaryDto;
+    private ProprietaryDto proprietary;
 
 }

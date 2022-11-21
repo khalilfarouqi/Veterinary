@@ -32,7 +32,7 @@ public class Animal {
     private Description_condition description_condition;
 
     @ManyToOne
-    @JoinColumn(name="Proprietary_ID", nullable=false)
+    @JoinColumn(name="Proprietary_ID")
     private Proprietary proprietary;
 
 }

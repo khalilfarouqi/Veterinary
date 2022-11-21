@@ -2,6 +2,8 @@ package com.app.Animaux.business.dto;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class ProprietaryDto {
 
@@ -10,6 +12,6 @@ public class ProprietaryDto {
     private String LastNom;
     private String CIN;
 
-    private AnimalDto animalDto;
+    private List<AnimalDto> animal;
 
 }
