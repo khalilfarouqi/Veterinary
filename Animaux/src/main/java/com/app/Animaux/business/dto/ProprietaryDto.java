@@ -6,8 +6,8 @@ import lombok.Data;
 public class ProprietaryDto {
 
     private Long Id;
-    private String FirstNom;
-    private String LastNom;
+    private String FirstName;
+    private String LastName;
     private String CIN;
 
     private AnimalDto animalDto;

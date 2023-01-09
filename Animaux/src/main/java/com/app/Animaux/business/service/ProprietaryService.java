@@ -30,7 +30,7 @@ public class ProprietaryService {
 
         proprietary.setProprietary(proprietaryRequest.getProprietary());
         proprietary.setCIN(proprietaryRequest.getCIN());
-        proprietary.setFirstNom(proprietaryRequest.getFirstNom());
+        proprietary.setFirstName(proprietaryRequest.getFirstName());
         proprietary.setProprietary(proprietaryRequest.getProprietary());
 
         return proprietaryRepository.save(proprietary);
