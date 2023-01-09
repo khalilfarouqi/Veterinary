@@ -28,7 +28,7 @@ public class MedicationService {
         Medications medications = medicationRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Medication", "id", id));
 
-        medications.setNom(medicationsRequest.getNom());
+        medications.setName(medicationsRequest.getName());
         medications.setUPET(medicationsRequest.getUPET());
         medications.setMarque(medicationsRequest.getMarque());
         medications.setQteStock(medicationsRequest.getQteStock());
