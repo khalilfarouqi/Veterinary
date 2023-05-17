@@ -28,10 +28,10 @@ public class AnimalService {
         Animal animal = animalRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Animal", "id", id));
 
-        if (animalRequest.getDate_Birth() != null) animal.setDate_Birth(animalRequest.getDate_Birth());
+        if (animalRequest.getDateBirth() != null) animal.setDateBirth(animalRequest.getDateBirth());
         if (animalRequest.getRace() != null) animal.setRace(animalRequest.getRace());
         if (animalRequest.getName() != null) animal.setName(animalRequest.getName());
-        if (animalRequest.getDescription_condition() != null) animal.setDescription_condition(animalRequest.getDescription_condition());
+        if (animalRequest.getDescriptionCondition() != null) animal.setDescriptionCondition(animalRequest.getDescriptionCondition());
 
         animal.setProprietary(animalRequest.getProprietary());
 
