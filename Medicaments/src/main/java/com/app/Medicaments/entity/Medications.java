@@ -13,20 +13,20 @@ import javax.persistence.*;
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
 public class Medications {
 
-    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "Name")
-    private String Name;
+    private String name;
 
     @Column(name = "Marque")
-    private String Marque;
+    private String marque;
 
     @Column(name = "UPET")
     //UPET = unit price excluding taxes
-    private Double UPET;
+    private Double upet;
 
     @Column(name = "QteStock")
-    private int QteStock;
+    private int qteStock;
 
 }
