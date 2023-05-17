@@ -33,7 +33,7 @@ public class MemberService {
         members.setBirthDay(membersRequest.getBirthDay());
         members.setFirstName(membersRequest.getFirstName());
         members.setLastName(membersRequest.getLastName());
-        members.setHiring_Date(membersRequest.getHiring_Date());
+        members.setHiringDate(membersRequest.getHiringDate());
 
         return memberRepository.save(members);
     }

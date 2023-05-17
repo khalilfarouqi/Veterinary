@@ -16,22 +16,22 @@ import java.util.Date;
 public class Members {
 
     @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    private Long id;
 
     @Column(name = "FirstName")
-    private String FirstName;
+    private String firstName;
 
     @Column(name = "LastName")
-    private String LastName;
+    private String lastName;
 
     @Column(name = "BirthDay")
-    private Date BirthDay;
+    private Date birthDay;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "Post")
     private Post post;
 
     @Column(name = "HiringDate")
-    private Date Hiring_Date;
+    private Date hiringDate;
 
 }
