@@ -29,7 +29,7 @@ public class MedicationService {
                 .orElseThrow(() -> new ResourceNotFoundException("Medication", "id", id));
 
         medications.setName(medicationsRequest.getName());
-        medications.setUPET(medicationsRequest.getUPET());
+        medications.setUpet(medicationsRequest.getUpet());
         medications.setMarque(medicationsRequest.getMarque());
         medications.setQteStock(medicationsRequest.getQteStock());
 
