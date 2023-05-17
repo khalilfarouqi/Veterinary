@@ -15,24 +15,24 @@ import java.util.Date;
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
 public class Animal {
 
-    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "Name")
-    private String Name;
+    private String name;
 
     @Column(name = "Date_Birth")
-    private Date Date_Birth;
+    private Date dateBirth;
 
     @Column(name = "Race")
-    private String Race;
+    private String race;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "Description_condition")
-    private Description_condition description_condition;
+    private Description_condition descriptionCondition;
 
-    @ManyToOne
-    @JoinColumn(name="Proprietary_ID", nullable=false)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="Proprietary_ID")
     private Proprietary proprietary;
 
 }

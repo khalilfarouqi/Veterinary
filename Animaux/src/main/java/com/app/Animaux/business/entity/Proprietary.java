@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name="Proprietary")
@@ -15,22 +14,18 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
-
 public class Proprietary {
 
-    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "FirstName")
-    private String FirstName;
+    private String firstName;
 
     @Column(name = "LastName")
-    private String LastName;
+    private String lastName;
 
     @Column(name = "CIN")
-    private String CIN;
-
-    @OneToMany(mappedBy = "proprietary")
-    private List<Animal> Proprietary;
+    private String cin;
 
 }
