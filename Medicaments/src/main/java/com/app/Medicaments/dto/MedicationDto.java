@@ -5,11 +5,11 @@ import lombok.Data;
 @Data
 public class MedicationDto {
 
-    private Long ID;
-    private String Name;
-    private String Marque;
+    private Long id;
+    private String name;
+    private String marque;
     //UPET = unit price excluding taxes
-    private Double UPET;
-    private int QteStock;
+    private Double upet;
+    private int qteStock;
 
 }

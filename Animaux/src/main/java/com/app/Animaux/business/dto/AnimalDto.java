@@ -8,11 +8,11 @@ import java.util.Date;
 @Data
 public class AnimalDto {
 
-    private Long Id;
-    private String Name;
-    private Date Date_Birth;
-    private String Race;
-    private Description_condition description_condition;
+    private Long id;
+    private String name;
+    private Date dateBirth;
+    private String race;
+    private Description_condition descriptionCondition;
 
     private ProprietaryDto proprietaryDto;
 

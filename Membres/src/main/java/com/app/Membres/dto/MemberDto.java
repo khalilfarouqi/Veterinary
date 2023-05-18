@@ -8,11 +8,11 @@ import java.util.Date;
 @Data
 public class MemberDto {
 
-    private Long ID;
-    private String FirstName;
-    private String LastName;
-    private Date BirthDay;
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private Date birthDay;
     private Post post;
-    private Date Hiring_Date;
+    private Date hiringDate;
 
 }
