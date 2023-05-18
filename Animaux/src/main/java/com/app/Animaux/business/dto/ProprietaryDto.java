@@ -5,11 +5,9 @@ import lombok.Data;
 @Data
 public class ProprietaryDto {
 
-    private Long Id;
-    private String FirstName;
-    private String LastName;
-    private String CIN;
-
-    private AnimalDto animalDto;
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String cin;
 
 }
